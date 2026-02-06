@@ -20,11 +20,13 @@ struct ContentView: View {
                 .fontWeight(.bold)
 
             HStack(spacing: 20) {
-                Button {
-                    count -= 1
-                } label: {
-                    Image(systemName: "minus.circle.fill")
-                        .font(.largeTitle)
+                if count > 0 {
+                    Button {
+                        count -= 1
+                    } label: {
+                        Image(systemName: "minus.circle.fill")
+                            .font(.largeTitle)
+                    }
                 }
 
                 Button {
